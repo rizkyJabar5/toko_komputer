@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 23 Apr 2018 11:28:50 at https://seantheme.com/color-admin-v3.0/admin/apple/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://seantheme.com/color-admin-v3.0/admin/apple/ -O1 "D:\b\b" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:31:58	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/css/assets/plugins/superbox/img/close.gif (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/css/style.min.css)
+11:31:58	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/inbox_v2.html (from https://seantheme.com/color-admin-v3.0/admin/apple/email_compose.html)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/error.png (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/play-pause.png (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/error.svg (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/play-pause.svg (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/video-play.png (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+11:35:41	Error: 	"Not Found" (404) at link https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/img/video-play.svg (from https://seantheme.com/color-admin-v3.0/admin/apple/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 6 minutes 51 seconds : 960 links scanned, 951 files written (30291565 bytes overall) [30435873 bytes received at 74053 bytes/sec], 150762 bytes transferred using HTTP compression in 1 files, ratio 35%, 8.8 requests per connection
+(8 errors, 0 warnings, 0 messages)
