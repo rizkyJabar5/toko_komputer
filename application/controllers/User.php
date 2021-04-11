@@ -1,16 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- * ------------------------------------------------------------------------
- * CLASS NAME : User
- * ------------------------------------------------------------------------
- *
- * @author     Muhammad Akbar <muslim.politekniktelkom@gmail.com>
- * @copyright  2016
- * @license    http://aplikasiphp.net
- *
- */
 
 class User extends MY_Controller 
 {

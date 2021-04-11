@@ -25,7 +25,13 @@ class Barang extends MY_Controller
 		$level 			= $this->session->userdata('ap_level');
 
 		$requestData	= $_REQUEST;
-		$fetch			= $this->m_barang->fetch_data_barang($requestData['search']['value'], $requestData['order'][0]['column'], $requestData['order'][0]['dir'], $requestData['start'], $requestData['length']);
+		$fetch			= $this->m_barang->fetch_data_barang(
+			$requestData['search']['value'], 
+			$requestData['order'][0]['column'], 
+			$requestData['order'][0]['dir'], 
+			$requestData['start'], 
+			$requestData['length']
+		);
 		
 		$totalData		= $fetch['totalData'];
 		$totalFiltered	= $fetch['totalFiltered'];
@@ -102,14 +108,46 @@ class Barang extends MY_Controller
 				$no = 0;
 				foreach($_POST['kode'] as $kode)
 				{
-					$this->form_validation->set_rules('kode['.$no.']','Kode Barang #'.($no + 1),'trim|required|alpha_numeric|max_length[40]|callback_exist_kode[kode['.$no.']]');
-					$this->form_validation->set_rules('nama['.$no.']','Nama Barang #'.($no + 1),'trim|required|max_length[60]|alpha_numeric_spaces');
-					$this->form_validation->set_rules('id_kategori_barang['.$no.']','Kategori #'.($no + 1),'trim|required');
-					$this->form_validation->set_rules('size['.$no.']','Size Barang #'.($no + 1),'trim|required|max_length[60]|alpha_numeric_spaces');
-					$this->form_validation->set_rules('id_merk_barang['.$no.']','Merek #'.($no + 1),'trim');
-					$this->form_validation->set_rules('stok['.$no.']','Stok #'.($no + 1),'trim|required|numeric|max_length[10]|callback_cek_titik[stok['.$no.']]');
-					$this->form_validation->set_rules('harga['.$no.']','Harga #'.($no + 1),'trim|required|numeric|min_length[4]|max_length[10]|callback_cek_titik[harga['.$no.']]');
-					$this->form_validation->set_rules('keterangan['.$no.']','Keterangan #'.($no + 1),'trim|max_length[2000]');
+					$this->form_validation->set_rules(
+						'kode['.$no.']',
+						'Kode Barang #'.($no + 1),
+						'trim|required|alpha_numeric|max_length[40]|callback_exist_kode[kode['.$no.']]'
+					);
+					$this->form_validation->set_rules(
+						'nama['.$no.']',
+						'Nama Barang #'.($no + 1),
+						'trim|required|max_length[60]|alpha_numeric_spaces'
+					);
+					$this->form_validation->set_rules(
+						'id_kategori_barang['.$no.']',
+						'Kategori #'.($no + 1),
+						'trim|required'
+					);
+					$this->form_validation->set_rules(
+						'size['.$no.']',
+						'Size Barang #'.($no + 1),
+						'trim|required|max_length[60]|alpha_numeric_spaces'
+					);
+					$this->form_validation->set_rules(
+						'id_merk_barang['.$no.']',
+						'Merek #'.($no + 1),
+						'trim'
+					);
+					$this->form_validation->set_rules(
+						'stok['.$no.']',
+						'Stok #'.($no + 1),
+						'trim|required|numeric|max_length[10]|callback_cek_titik[stok['.$no.']]'
+					);
+					$this->form_validation->set_rules(
+						'harga['.$no.']',
+						'Harga #'.($no + 1),
+						'trim|required|numeric|min_length[4]|max_length[10]|callback_cek_titik[harga['.$no.']]'
+					);
+					$this->form_validation->set_rules(
+						'keterangan['.$no.']',
+						'Keterangan #'.($no + 1),
+						'trim|max_length[2000]'
+					);
 					$no++;
 				}
 				
@@ -270,7 +308,15 @@ class Barang extends MY_Controller
 							$harga 				= $this->input->post('harga');
 							$keterangan 		= $this->clean_tag_input($this->input->post('keterangan'));
 
-							$update = $this->m_barang->update_barang($id_barang, $kode_barang, $nama,  $id_kategori_barang, $size, $id_merk_barang, $stok, $harga, $keterangan);
+							$update = $this->m_barang->update_barang(
+								$id_barang, 
+								$kode_barang, 
+								$nama, 
+								$id_kategori_barang, 
+								$size, $id_merk_barang, 
+								$stok, 
+								$harga, 
+								$keterangan);
 							if($update)
 							{
 								echo json_encode(array(
@@ -314,7 +360,13 @@ class Barang extends MY_Controller
 		$level 			= $this->session->userdata('ap_level');
 
 		$requestData	= $_REQUEST;
-		$fetch			= $this->m_merk_barang->fetch_data_merek($requestData['search']['value'], $requestData['order'][0]['column'], $requestData['order'][0]['dir'], $requestData['start'], $requestData['length']);
+		$fetch			= $this->m_merk_barang->fetch_data_merek(
+			$requestData['search']['value'],
+			$requestData['order'][0]['column'],
+			$requestData['order'][0]['dir'],
+			$requestData['start'],
+			$requestData['length']
+		);
 		
 		$totalData		= $fetch['totalData'];
 		$totalFiltered	= $fetch['totalFiltered'];
@@ -473,8 +525,14 @@ class Barang extends MY_Controller
 		$level 			= $this->session->userdata('ap_level');
 
 		$requestData	= $_REQUEST;
-		$fetch			= $this->m_kategori_barang->fetch_data_kategori($requestData['search']['value'], $requestData['order'][0]['column'], $requestData['order'][0]['dir'], $requestData['start'], $requestData['length']);
-		
+		$fetch			= $this->m_kategori_barang->fetch_data_kategori(
+			$requestData['search']['value'], 
+			$requestData['order'][0]['column'], 
+			$requestData['order'][0]['dir'], 
+			$requestData['start'], 
+			$requestData['length']
+		);
+
 		$totalData		= $fetch['totalData'];
 		$totalFiltered	= $fetch['totalFiltered'];
 		$query			= $fetch['query'];
@@ -632,7 +690,11 @@ class Barang extends MY_Controller
 			$get_stok = $this->m_barang->get_stok($kode);
 			if($stok > $get_stok->row()->total_stok)
 			{
-				echo json_encode(array('status' => 0, 'pesan' => "Stok untuk <b>".$get_stok->row()->nama_barang."</b> saat ini hanya tersisa <b>".$get_stok->row()->total_stok."</b> !"));
+				echo json_encode(array(
+					'status' => 0, 
+					'pesan' => "Stok untuk <b>".$get_stok->row()->nama_barang."</b> saat ini hanya tersisa <b>".$get_stok->row()->total_stok."</b> !")
+		
+				);
 			}
 			else
 			{

@@ -51,7 +51,7 @@
 									<div id='ResponseInput'></div>
 							<?php echo form_close(); ?>
 					</div>
-					<div style="background-color:#e4e7e8;color:#222;">
+					<!--<div style="background-color:#e4e7e8;color:#222;">
 						<br>
 						<p align="center"><?php echo config_item('web_footer'); ?></p>
 						<hr style='border-color:#999; border-style:dashed;'/>
@@ -62,7 +62,9 @@
 							<div class='col-sm-3'><b>Kasir</b> <br />Username : kasir<br />Password : kasir <br><br> </div>
 							<div class='col-sm-3'><b>Gudang</b> <br />Username : jaka<br />Password : jaka <br><br> </div>
 							<div class='col-sm-3'><b>Keuangan</b> <br />Username : joko<br />Password : joko <br><br> </div>
+						
 						</div>
+						-->
 						</center>
 					</div>
 			</div>

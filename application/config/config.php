@@ -27,7 +27,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //Setingan Database
 $config['database_host']	= 'localhost';
 $config['database_user']	= 'root';
-$config['database_pass'] 	= '123';
+$config['database_pass'] 	= '';
 $config['database_name']	= 'db_komputer';
 
 //Setingan Base URL
@@ -45,8 +45,8 @@ $config['bootstrap']		= $config['plugin'].'bootstrap-3.3.6/';
 $config['font_awesome']		= $config['plugin'].'font-awesome/';
 
 //Setingan Judul & Footer Web
-$config['web_title']		= "Aplikasi Penjualan - Toko Komputer";
-$config['web_footer']		= $config['web_title']." &copy; ".date('Y').". Version 1.0. <br> Programmed & Designed by <a href='https://pondoksoft.com' target='blank'>#</a>";
+$config['web_title']		= "PT. Aneka Technology Computer";
+$config['web_footer']		= $config['web_title']." &copy; ".date('Y').". <br> Maintenance by <a href='https://instagram.com/rizkyjabar' target='blank'>Mahasiswa PENS</a>";
 
 /*
 |--------------------------------------------------------------------------

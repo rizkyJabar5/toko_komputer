@@ -71,7 +71,8 @@ class M_service extends CI_Model
 			'nama_konsumen'  => $nama_konsumen,
 			'no_hp_konsumen' => $no_hp_konsumen,
 			'tgl_service' 	 => $tgl_service,
-			'id_user'			   => $this->session->userdata('ap_id_user')
+			'dihapus'		 => 'tidak',
+			'id_user'		 => $this->session->userdata('ap_id_user')
 		);
 
 		return $this->db->insert('service', $dt);
